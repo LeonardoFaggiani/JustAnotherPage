@@ -56,7 +56,7 @@ export default function Blog() {
                             <div className="blog-item content-box">
                                 <div id="post-73" className="post type-post status-publish format-standard has-post-thumbnail hentry category-design category-music category-uncategorized category-wordpress tag-design tag-html">
                                     <div className="image">
-                                        <a className="post-thumbnail" target='blank' href="https://github.com/LeonardoFaggiani" aria-hidden="true" tabIndex="-1">
+                                        <a className="post-thumbnail" target='blank' href="https://github.com/LeonardoFaggiani/UE5Samples" aria-hidden="true" tabIndex="-1">
                                             <img width="1280"
                                                 height="720" src="https://leofstorage.blob.core.windows.net/my-personal-storage/UnrealGameLobby.JPG"
                                                 decoding="async"
@@ -65,11 +65,11 @@ export default function Blog() {
                                         </a>
                                     </div>
                                     <div className="desc">
-                                        <a href="https://github.com/LeonardoFaggiani" className="name">{t("blog.unreal.title")}</a>
+                                        <a href="https://github.com/LeonardoFaggiani/UE5Samples" className="name">{t("blog.unreal.title")}</a>
                                         <div className="single-post-text">
                                             <p>{t("blog.unreal.description")}</p>
                                             <div>
-                                                <a href="https://github.com/LeonardoFaggiani" className="btn">
+                                                <a href="https://github.com/LeonardoFaggiani/UE5Samples" className="btn">
                                                     <span className="animated-button">
                                                         <span>{ConvertToEm(t("buttonReadMore"))}</span></span>
                                                 </a>
