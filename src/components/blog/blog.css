@@ -1,0 +1,22 @@
+.top {
+    margin-top: 150px;
+}
+
+.blogSubtitle {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1.2;
+    color: #68e0cf;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.center{
+ text-align: center;
+}
+
+.centerContent {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}

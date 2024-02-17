@@ -1,0 +1,56 @@
+.preloader {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 0;
+    z-index: 999
+  }
+  
+  .preloader .box-1,.preloader .box-2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: #68e0cf
+  }
+  
+  .preloader .box-2 {
+    background: #373b40
+  }
+  
+  .preloader .spinner {
+    margin: -40px 0 0 -5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 80px
+  }
+  
+  .preloader .spinner .lines {
+    position: absolute;
+    width: 10px;
+    height: 80px
+  }
+  
+  .preloader .spinner .lines:before,.preloader .spinner .lines:after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 80px;
+    background: #fff;
+    clip: rect(0,0,20px,0);
+    -webkit-clip: rect(0,0,20px,0)
+  }
+  
+  .preloader .spinner .lines:before {
+    left: 0;
+    animation: loading 2s cubic-bezier(.165,.85,.45,1) 0s infinite
+  }
+  
+  .preloader .spinner .lines:after {
+    left: 15px;
+    background: #68e0cf;
+    animation: loading 2s cubic-bezier(.165,.85,.45,1) .5s infinite
+  }
