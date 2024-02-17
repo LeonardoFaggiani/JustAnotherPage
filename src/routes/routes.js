@@ -8,7 +8,7 @@ export const renderRoutes = () => {
 
     return (
         <>
-            <Route path="/" element={
+            <Route path="/justanotherpage" element={
                 <MainLayout>
                     <Home />
                 </MainLayout>} />
