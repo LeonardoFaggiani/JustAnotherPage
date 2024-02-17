@@ -84,7 +84,7 @@ export default function Blog() {
                             <div className="blog-item content-box">
                                 <div id="post-71" className="post type-post status-publish format-standard has-post-thumbnail hentry category-design category-music category-uncategorized category-wordpress tag-design tag-html">
                                     <div className="image">
-                                        <a className="post-thumbnail" href="https://github.com/LeonardoFaggiani" aria-hidden="true" tabIndex="-1">
+                                        <a className="post-thumbnail" href="https://github.com/LeonardoFaggiani/justanotherpage" aria-hidden="true" tabIndex="-1">
                                             <img width="1280" height="719" src="https://leofstorage.blob.core.windows.net/my-personal-storage/MyWeb.JPG"
                                                 alt="Modern street art as a source of inspiration"
                                                 decoding="async"
@@ -99,11 +99,11 @@ export default function Blog() {
                                         </a>
                                     </div>
                                     <div className="desc">
-                                        <a href="https://github.com/LeonardoFaggiani" className="name">{t("blog.myweb.title")}</a>
+                                        <a href="https://github.com/LeonardoFaggiani/justanotherpage" className="name">{t("blog.myweb.title")}</a>
                                         <div className="single-post-text">
                                             <p>{t("blog.myweb.description")}</p>
                                             <div>
-                                                <a href="https://github.com/LeonardoFaggiani" className="btn">
+                                                <a href="https://github.com/LeonardoFaggiani/justanotherpage" className="btn">
                                                     <span className="animated-button"><span>{ConvertToEm(t("buttonReadMore"))}</span></span>
                                                 </a>
                                             </div>
