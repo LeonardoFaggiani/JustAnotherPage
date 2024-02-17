@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import './assets/all.min.css'
 import reportWebVitals from './reportWebVitals';
 import { I18nextProvider } from "react-i18next";
 import { renderRoutes } from './routes/routes';
