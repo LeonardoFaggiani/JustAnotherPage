@@ -1,6 +1,6 @@
 import parse from 'html-react-parser';
 
-export const ConvertToEm = (input, hasParse = true) => {
+export const convertToEm = (input, hasParse = true) => {
     
     let result = "";
     if (input !== null || input !== undefined) {
@@ -12,4 +12,14 @@ export const ConvertToEm = (input, hasParse = true) => {
 
         return hasParse ? parse(result) : result;
     }
+};
+
+
+export const scrollTo = (offsetTop, behavior) => {
+
+    window.scrollTo({
+        top: offsetTop,
+        behavior: behavior
+    });
+
 };

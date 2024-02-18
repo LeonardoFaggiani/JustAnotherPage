@@ -2,7 +2,7 @@ import React, { useEffect, useContext } from 'react'
 import './blog.css'
 import { useTranslation } from 'react-i18next';
 import { LoadingScreenContext } from '../../context/loadingProvider'
-import { ConvertToEm } from '../shared/utils/utils'
+import { convertToEm, scrollTo } from '../shared/utils/utils'
 
 export default function Blog() {
 
@@ -15,10 +15,7 @@ export default function Blog() {
             const wrapper = document.getElementById('wrapperContent');
             wrapper.classList.add("marginLeft-12");
 
-            window.scrollTo({
-                top: 0,
-                behavior: "instant"
-            });
+            scrollTo(0, "instant");
         };
 
         setStyle();
@@ -71,7 +68,7 @@ export default function Blog() {
                                             <div>
                                                 <a href="https://github.com/LeonardoFaggiani/UE5Samples" className="btn">
                                                     <span className="animated-button">
-                                                        <span>{ConvertToEm(t("buttonReadMore"))}</span></span>
+                                                        <span>{convertToEm(t("buttonReadMore"))}</span></span>
                                                 </a>
                                             </div>
                                         </div>
@@ -104,7 +101,7 @@ export default function Blog() {
                                             <p>{t("blog.myweb.description")}</p>
                                             <div>
                                                 <a href="https://github.com/LeonardoFaggiani/justanotherpage" className="btn">
-                                                    <span className="animated-button"><span>{ConvertToEm(t("buttonReadMore"))}</span></span>
+                                                    <span className="animated-button"><span>{convertToEm(t("buttonReadMore"))}</span></span>
                                                 </a>
                                             </div>
                                         </div>

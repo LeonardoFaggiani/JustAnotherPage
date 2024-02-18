@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next';
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import { ConvertToEm } from '../shared/utils/utils'
+import { convertToEm, scrollTo } from '../shared/utils/utils'
 import './header.css'
 
 
@@ -24,12 +24,8 @@ export default function Header() {
 
         const el = document.getElementById(targetId);
 
-        if (el) {
-            window.scrollTo({
-                top: el.offsetTop,
-                behavior: "smooth"
-            });
-        }
+        if (el)
+            scrollTo(el.offsetTop, "smooth");        
 
     }, [targetId]);
 
@@ -42,11 +38,7 @@ export default function Header() {
         if (sectionElement != null) {
 
             setOffsetTop(sectionElement.offsetTop);
-
-            window.scrollTo({
-                top: sectionElement.offsetTop,
-                behavior: "smooth"
-            });
+            scrollTo(sectionElement.offsetTop, "smooth");
         }
         else if (event.currentTarget.baseURI.includes('blog') && event.currentTarget.id != "blogItem") {
             navigate("/", { state: { targetId: sectionHeaderById.get(event.currentTarget.id) } });
@@ -78,10 +70,7 @@ export default function Header() {
         else
             header.current.classList.add("active");
 
-        window.scrollTo({
-            top: offsetTop,
-            behavior: "smooth"
-        });
+        scrollTo(offsetTop, "smooth");
     }
 
     return (
@@ -98,7 +87,7 @@ export default function Header() {
                 </a>
 
                 <a href="https://leofstorage.blob.core.windows.net/my-personal-storage/LeonardoFaggianiCV-EN.docx" className="btn download-cv-btn" target="_blank" download="">
-                    <span className="animated-button"><span>{ConvertToEm(t("header.download"))}</span></span>
+                    <span className="animated-button"><span>{convertToEm(t("header.download"))}</span></span>
                     <i className="icon fas fa-download"></i>
                 </a>
 
@@ -108,25 +97,25 @@ export default function Header() {
                             <ul id="menu-main-menu">
                                 <li onClick={(event) => scrollToSection(event)} id="homeItem" className="current-menu-item">
                                     <a className="pointerCursor">
-                                        <span className="animated-button"><span>{ConvertToEm(t("header.home"))}</span></span>
+                                        <span className="animated-button"><span>{convertToEm(t("header.home"))}</span></span>
                                     </a>
                                 </li>
 
                                 <li onClick={(event) => scrollToSection(event)} id="aboutItem">
                                     <a className="pointerCursor">
                                         <span className="animated-button">
-                                            <span>{ConvertToEm(t("header.about"))}</span></span>
+                                            <span>{convertToEm(t("header.about"))}</span></span>
                                     </a>
                                 </li>
 
                                 <li onClick={(event) => scrollToSection(event)} id="contactItem">
                                     <a className="pointerCursor">
-                                        <span className="animated-button"> <span>{ConvertToEm(t("header.contacts"))}</span></span>
+                                        <span className="animated-button"> <span>{convertToEm(t("header.contacts"))}</span></span>
                                     </a>
                                 </li>
 
                                 <li onClick={(event) => scrollToSection(event)} id="blogItem">
-                                    <Link to="/blog"><span className="animated-button"><span>{ConvertToEm(t("header.blog"))}</span></span></Link>
+                                    <Link to="/blog"><span className="animated-button"><span>{convertToEm(t("header.blog"))}</span></span></Link>
                                 </li>
                             </ul>
                         </div>

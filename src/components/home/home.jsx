@@ -3,7 +3,7 @@ import './home.css'
 import Section from '../section/section';
 import { LoadingScreenContext } from '../../context/loadingProvider'
 import { useTranslation } from 'react-i18next';
-import { ConvertToEm } from '../shared/utils/utils'
+import { convertToEm, scrollTo } from '../shared/utils/utils'
 
 
 export default function Home() {
@@ -35,7 +35,7 @@ export default function Home() {
                                     </div>
                                     <a id="goToContactButton" className="btn">
                                         <span className="animated-button">
-                                            <span>${ConvertToEm(t("section.started.buttonLabel"), false)}</span>
+                                            <span>${convertToEm(t("section.started.buttonLabel"), false)}</span>
                                         </span>
                                         <i className="icon fas fa-chevron-right"></i>
                                     </a>
@@ -130,7 +130,7 @@ export default function Home() {
                                         <p>
                                             <button type="submit" className="btn">
                                                 <span className="animated-button">
-                                                    <span>${ConvertToEm(t("sendMessage"), false)}</span>
+                                                    <span>${convertToEm(t("sendMessage"), false)}</span>
                                                 </span>
                                                 <i className="icon fas fa-chevron-right"></i>
                                             </button>
@@ -167,12 +167,9 @@ export default function Home() {
     );
 
     function goToSection(sectionName) {
-        const section = document.getElementById(sectionName);
 
-        window.scrollTo({
-            top: section.offsetTop,
-            behavior: "smooth"
-        });
+        const section = document.getElementById(sectionName);
+        scrollTo(section.offsetTop, "smooth");
     }
 
     function setOnClickEvent() {

@@ -58,42 +58,7 @@ export default function Loader({isLoading}) {
             transition: 'transform 0.4s cubic-bezier(0.7, 0, 0.3, 1)'
         });
     }
-
-    // useEffect(() => {
-
-    //     const handleLoad = () => {
-
-    //         const timeoutId = setTimeout(() => {
-
-    //             setLinesAnimation({
-    //                 opacity: '0',
-    //                 transform: 'translateY(-40px)',
-    //                 transition: 'opacity 0.4s, transform 0.4s'
-    //             });
-
-    //             setFirstBackgroundAnimation({
-    //                 transform: 'translateY(-100%)',
-    //                 transition: 'transform 1s cubic-bezier(0.7, 0, 0.3, 1)'
-    //             });
-
-    //             setSecondBackgroundAnimation({
-    //                 transform: 'translateY(-100%)',
-    //                 transition: 'transform 0.4s cubic-bezier(0.7, 0, 0.3, 1)'
-    //             });
-    //         }, 2000);
-
-    //         return () => clearTimeout(timeoutId);
-    //     };
-
-    //     window.addEventListener("load", handleLoad);
-
-    //     return () => {
-    //         window.removeEventListener("load", handleLoad);
-    //     };
-
-    // }, []);
-
-
+    
     return (
         <>
             <div className="preloader">
