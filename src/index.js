@@ -5,17 +5,17 @@ import './assets/all.min.css'
 import reportWebVitals from './reportWebVitals';
 import { I18nextProvider } from "react-i18next";
 import { renderRoutes } from './routes/routes';
-import { BrowserRouter, Routes } from "react-router-dom";
+import { HashRouter, Routes } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <I18nextProvider>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           {renderRoutes()}
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </I18nextProvider>
   </React.StrictMode>
 );
