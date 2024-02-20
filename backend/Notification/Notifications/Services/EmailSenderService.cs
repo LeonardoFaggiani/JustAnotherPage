@@ -1,4 +1,4 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using System;
 
 using MimeKit;
 
@@ -6,21 +6,18 @@ namespace Notification.Notifications.Services
 {
     public class EmailSenderService : IEmailSenderService
     {
-        private readonly IConfiguration configuration;
         private readonly IEmailBuilder emailBuilder;
 
-        public EmailSenderService(IEmailBuilder emailBuilder,
-            IConfiguration configuration)
+        public EmailSenderService(IEmailBuilder emailBuilder)
         {
             this.emailBuilder = emailBuilder;
-            this.configuration = configuration;
         }
 
         public void SendEmail(string content)
         {
             MimeMessage message = this.emailBuilder
-                .SetFrom(configuration.GetSection("EmailSettingsFrom").Value)
-                .SetTo(configuration.GetSection("EmailSettingsTo").Value)
+                .SetFrom(Environment.GetEnvironmentVariable("EmailSettingsFrom"))
+                .SetTo(Environment.GetEnvironmentVariable("EmailSettingsTo"))
                 .SetSubject("Contact from MyPage")
                 .SetContent(content)
                 .Build();
@@ -29,7 +26,7 @@ namespace Notification.Notifications.Services
             {
                 client.Connect("smtp-mail.outlook.com", 587, false);
 
-                client.Authenticate(configuration.GetSection("EmailSettingsEmailAuth").Value, configuration.GetSection("EmailSettingsAppPassword").Value);
+                client.Authenticate(Environment.GetEnvironmentVariable("EmailSettingsEmailAuth"), Environment.GetEnvironmentVariable("EmailSettingsAppPassword"));
 
                 client.Send(message);
 

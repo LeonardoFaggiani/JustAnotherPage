@@ -17,6 +17,7 @@ namespace Notification.Notifications.Services
 
             return this;
         }
+
         public IEmailBuilder SetTo(string email)
         {
             this.MimeMessage.To.Add(new MailboxAddress("Destination Contact", email));
