@@ -9,10 +9,12 @@ namespace Notification.Notifications.Services
     public class EmailSenderService : IEmailSenderService
     {
         private readonly IEmailBuilder emailBuilder;
+        private readonly ILogger logger;
 
-        public EmailSenderService(IEmailBuilder emailBuilder)
+        public EmailSenderService(IEmailBuilder emailBuilder, ILogger logger)
         {
             this.emailBuilder = emailBuilder;
+            this.logger = logger;
         }
 
         public void SendEmail(string content, ILogger logger)
