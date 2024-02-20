@@ -1,5 +1,7 @@
 ﻿using System;
 
+using Microsoft.Extensions.Logging;
+
 using MimeKit;
 
 namespace Notification.Notifications.Services
@@ -13,8 +15,10 @@ namespace Notification.Notifications.Services
             this.emailBuilder = emailBuilder;
         }
 
-        public void SendEmail(string content)
+        public void SendEmail(string content, ILogger logger)
         {
+            logger.LogInformation(string.Format("The email from is {0}", Environment.GetEnvironmentVariable("EmailSettingsFrom")));
+
             MimeMessage message = this.emailBuilder
                 .SetFrom(Environment.GetEnvironmentVariable("EmailSettingsFrom"))
                 .SetTo(Environment.GetEnvironmentVariable("EmailSettingsTo"))

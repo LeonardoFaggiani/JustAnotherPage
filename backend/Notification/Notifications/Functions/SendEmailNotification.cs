@@ -19,7 +19,7 @@ namespace Notification.Notifications.Functions
         {
             string content = string.Format("EmailContact:{0} \n FullName:{1} \n Message:{2}", notificationReadyToSend.Email, notificationReadyToSend.FullName, notificationReadyToSend.Message);
 
-            this.emailSenderService.SendEmail(content);
+            this.emailSenderService.SendEmail(content, log);
 
             log.LogInformation($"The email has been sent: {notificationReadyToSend.Email}");
         }
