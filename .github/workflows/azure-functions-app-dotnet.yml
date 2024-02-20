@@ -46,10 +46,10 @@ jobs:
       with:
         files: './backend/Notification/local.settings.json'
       env:
-        EmailSettings.From: ${{ secrets.AZURE_FUNCTIONAPP_EMAILSETTINGS_FROM }}
-        EmailSettings.To: ${{ secrets.AZURE_FUNCTIONAPP_EMAILSETTINGS_TO }}
-        EmailSettings.EmailAuth: ${{ secrets.AZURE_FUNCTIONAPP_EMAILSETTINGS_EMAILAUTH }}
-        EmailSettings.AppPassword: ${{ secrets.AZURE_FUNCTIONAPP_EMAILSETTINGS_APPPASSWORD }}
+        Values.EmailSettingsFrom: ${{ secrets.AZURE_FUNCTIONAPP_EMAILSETTINGS_FROM }}
+        Values.EmailSettingsTo: ${{ secrets.AZURE_FUNCTIONAPP_EMAILSETTINGS_TO }}
+        Values.EmailSettingsEmailAuth: ${{ secrets.AZURE_FUNCTIONAPP_EMAILSETTINGS_EMAILAUTH }}
+        Values.EmailSettingsAppPassword: ${{ secrets.AZURE_FUNCTIONAPP_EMAILSETTINGS_APPPASSWORD }}
 
     - name: Setup DotNet ${{ env.DOTNET_VERSION }} Environment
       uses: actions/setup-dotnet@v3
