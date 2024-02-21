@@ -9,18 +9,14 @@ namespace Notification.Notifications.Services
     public class EmailSenderService : IEmailSenderService
     {
         private readonly IEmailBuilder emailBuilder;
-        private readonly ILogger logger;
 
-        public EmailSenderService(IEmailBuilder emailBuilder, ILogger logger)
+        public EmailSenderService(IEmailBuilder emailBuilder)
         {
             this.emailBuilder = emailBuilder;
-            this.logger = logger;
         }
 
-        public void SendEmail(string content, ILogger logger)
+        public void SendEmail(string content)
         {
-            logger.LogInformation(string.Format("The email from is {0}", Environment.GetEnvironmentVariable("EmailSettingsFrom")));
-
             MimeMessage message = this.emailBuilder
                 .SetFrom(Environment.GetEnvironmentVariable("EmailSettingsFrom"))
                 .SetTo(Environment.GetEnvironmentVariable("EmailSettingsTo"))
