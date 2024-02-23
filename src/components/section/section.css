@@ -86,9 +86,9 @@
     -moz-transform: translateX(0);
     -o-transform: translateX(0)
   }
-  
-  
-  @media (max-width: 992px) {
+
+
+  @media (max-width: 992px) or (max-width: 1280px) {
     .section.started {
         margin:0;
         padding-top: 0;
@@ -147,8 +147,6 @@
         font-size: 40px
     }
   }
-
-
   
   .section.contacts .alert-success {
     display: none  
@@ -161,10 +159,8 @@
   }
 
 
-
-
 /*desktops - higher resolution*/
-@media (min-width: 1281px){
+@media (min-width: 1281px) {
     #section-contacts {
         min-height: 1158px;
     }
@@ -199,3 +195,103 @@
 }
 
 
+.contact-form {
+  padding-right: 40px;
+  float: left;
+  width: 60%;  
+}
+
+.contact-form .group-val {
+  position: relative;
+  margin-bottom: 40px
+}
+
+.contact-form .group-val p {
+  margin: 0
+}
+
+.contact-form .group-val .label {
+  padding: 0 10px;
+  position: absolute;
+  left: 35px;
+  top: -5px;
+  font-size: 12px;
+  line-height: 12px;
+  color: #fff;
+  font-weight: 800;
+  background: #373b40;
+  text-transform: uppercase;
+  z-index: 2
+}
+
+.contact-form .group-val .label strong {
+  color: #68e0cf
+}
+
+.contact-info {
+  padding: 30px;
+  float: right;
+  width: 40%;
+  margin-top: 26px;
+  min-height: 482px;
+  border: 1px solid #585d65;
+  border-radius: 30px;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -khtml-border-radius: 30px
+}
+
+.contact-info .name {
+  margin: 0 0 5px;
+  font-size: 24px;
+  color: #fff;
+  font-weight: 800
+}
+
+.contact-info .subname {
+  font-size: 11px;
+  color: #68e0cf;
+  font-weight: 600;
+  text-transform: uppercase
+}
+
+.contact-info .info-list {
+  margin: 35px 0 50px
+}
+
+.contact-info .info-list ul li {
+  position: relative;
+  white-space: nowrap;
+  width: 100%
+}
+
+.contact-info .info-list ul li strong {
+  margin-right: 8px;
+  width: auto
+}
+
+.contact-info .author {
+  font-family: "Mr Dafoe";
+  font-size: 32px;
+  color: #fff
+}
+
+@media (max-width: 720px) {
+  .contact-form {
+      padding-right:0;
+      float: none;
+      width: 100%
+  }
+
+  .contact-form .btn {
+      top: -10px;
+      display: block;
+      width: 100%
+  }
+
+  .contact-info {
+      margin-top: 40px;
+      float: none;
+      width: 100%
+  }
+}

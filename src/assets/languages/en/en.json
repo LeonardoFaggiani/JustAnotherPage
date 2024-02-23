@@ -10,6 +10,10 @@
         "blogSubtitle": "Aca encontraras todas mis pruebas de conceptos",
         "blogTitle": "My blog",
         "buttonReadMore": "Read more",
+        "fieldRequired": "The field is required.",
+        "formatIncorrect" : "The format is not valid.",
+        "responseSuccessOutput":"Thank you for your message. It has been sent.",
+        "responseFailureOutput":"An error has occurred, please try again later.",
         "header": {
             "download": "Download CV",
             "home": "Home",

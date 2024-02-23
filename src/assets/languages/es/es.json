@@ -10,6 +10,10 @@
         "blogSubtitle": "Aca encontraras todas mis pruebas de conceptos",
         "blogTitle": "Mi blog",
         "buttonReadMore": "Read more",
+        "fieldRequired": "Campo obligatorio.",
+        "formatIncorrect" : "El formato ingresado es incorrecto.",
+        "responseSuccessOutput":"Muchas gracias por tu mensaje. Ya ha sido enviado.",
+        "responseFailureOutput":"Ha ocurrido un error intentelo más tarde.",
         "header": {
             "download": "Descargar CV",
             "home": "Inicio",

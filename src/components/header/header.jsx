@@ -12,7 +12,7 @@ export default function Header() {
     const header = useRef(null);
     const navigate = useNavigate();
     const [offsetTop, setOffsetTop] = useState(0);
-    const [t, i18n] = useTranslation();
+    const [t] = useTranslation();
 
     const sectionHeaderById = new Map();
     sectionHeaderById.set('homeItem', "section-started");
@@ -40,7 +40,7 @@ export default function Header() {
             setOffsetTop(sectionElement.offsetTop);
             scrollTo(sectionElement.offsetTop, "smooth");
         }
-        else if (event.currentTarget.baseURI.includes('blog') && event.currentTarget.id != "blogItem") {
+        else if (event.currentTarget.baseURI.includes('blog') && event.currentTarget.id !== "blogItem") {
             navigate("/", { state: { targetId: sectionHeaderById.get(event.currentTarget.id) } });
         }
 
@@ -86,7 +86,7 @@ export default function Header() {
                     <span></span>
                 </a>
 
-                <a href="https://leofstorage.blob.core.windows.net/my-personal-storage/LeonardoFaggianiCV-EN.docx" className="btn download-cv-btn" target="_blank" download="">
+                <a href="https://leofstorage.blob.core.windows.net/my-personal-storage/LeonardoFaggianiCV-EN.docx" className="btn download-cv-btn" rel="noreferrer" target="_blank" download="">
                     <span className="animated-button"><span>{convertToEm(t("header.download"))}</span></span>
                     <i className="icon fas fa-download"></i>
                 </a>

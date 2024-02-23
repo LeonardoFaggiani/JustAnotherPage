@@ -57,7 +57,14 @@ export default function Blog() {
                                             <img width="1280"
                                                 height="720" src="https://leofstorage.blob.core.windows.net/my-personal-storage/UnrealGameLobby.JPG"
                                                 decoding="async"
-                                                srcSet="https://leofstorage.blob.core.windows.net/my-personal-storage/UnrealGameLobby.JPG 1280w, https://leofstorage.blob.core.windows.net/my-personal-storage/UnrealGameLobby.JPG 300w, https://leofstorage.blob.core.windows.net/my-personal-storage/UnrealGameLobby.JPG 1024w, https://leofstorage.blob.core.windows.net/my-personal-storage/UnrealGameLobby.JPG 768w, https://leofstorage.blob.core.windows.net/my-personal-storage/UnrealGameLobby.JPG 512w, https://leofstorage.blob.core.windows.net/my-personal-storage/UnrealGameLobby.JPG 900w, https://leofstorage.blob.core.windows.net/my-personal-storage/UnrealGameLobby.JPG 1170w"
+                                                srcSet="https://leofstorage.blob.core.windows.net/my-personal-storage/UnrealGameLobby.JPG 1280w,
+                                                 https://leofstorage.blob.core.windows.net/my-personal-storage/UnrealGameLobby.JPG 300w,
+                                                 https://leofstorage.blob.core.windows.net/my-personal-storage/UnrealGameLobby.JPG 1024w,
+                                                 https://leofstorage.blob.core.windows.net/my-personal-storage/UnrealGameLobby.JPG 768w,
+                                                 https://leofstorage.blob.core.windows.net/my-personal-storage/UnrealGameLobby.JPG 512w,
+                                                 https://leofstorage.blob.core.windows.net/my-personal-storage/UnrealGameLobby.JPG 900w,
+                                                 https://leofstorage.blob.core.windows.net/my-personal-storage/UnrealGameLobby.JPG 1170w"
+                                                 alt='UnrealGameLobby'
                                                 sizes="(max-width: 1280px) 100vw, 1280px" />
                                         </a>
                                     </div>

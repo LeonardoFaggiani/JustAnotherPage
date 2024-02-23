@@ -4,15 +4,15 @@ import Section from '../section/section';
 import { LoadingScreenContext } from '../../context/loadingProvider'
 import { useTranslation } from 'react-i18next';
 import { convertToEm, scrollTo } from '../shared/utils/utils'
+import SectionContact from '../section/section-contact'
 
 
 export default function Home() {
 
     const home = useRef(null);
     const about = useRef(null);
-    const contact = useRef(null);
     const [scrollTop, setScrollTop] = useState(0);
-    const [t, i18n] = useTranslation();
+    const [t] = useTranslation();
     const useLoadingScreen = useContext(LoadingScreenContext);
     
     const sectionStartedConfig = {
@@ -74,92 +74,6 @@ export default function Home() {
                             </div>
                         </div>
                     </div>`
-    };
-
-    const sectionContactConfig = {
-        id: "section-contacts",
-        innerRef: contact,
-        content: `<div className="section contacts">
-                    <div className="content">
-                        <div className="titles">
-                            <h2 className="title"> <span> ${t("section.contact.title")} </span></h2>
-                            <div className="subtitle"> <span> ${t("section.contact.subtitle")} </span></div>
-                        </div>
-                        <div className="contact-form">
-                            <div lang="en-US" dir="ltr">
-                                <div>
-                                    <p role="status" aria-live="polite" aria-atomic="true"></p>
-                                    <ul></ul>
-                                </div>
-                                <form action="/#wpcf7-f57-p97-o1" method="post" aria-label="Contact form" noValidate="noValidate" data-status="init">
-
-                                    <div className="group-val">
-                                        <div className="label">
-                                            <p>${t("fullName")} <strong>*</strong></p>
-                                        </div>
-                                        <p>
-                                            <span data-name="your-name">
-                                                <input size="40" aria-required="true" aria-invalid="false" placeholder="ej.: Leonel Messi" type="text" name="your-name" />
-                                            </span>
-                                        </p>
-                                    </div>
-
-                                    <div className="group-val">
-                                        <div className="label">
-                                            <p>${t("email")} <strong>*</strong></p>
-                                        </div>
-                                        <p>
-                                            <span data-name="your-email">
-                                                <input size="40" aria-required="true" aria-invalid="false" placeholder="example@domain.com" type="email" name="your-email" />
-                                            </span>
-                                        </p>
-                                    </div>
-
-                                    <div className="group-val">
-                                        <div className="label">
-                                            <p>${t("message")}<strong>*</strong></p>
-                                        </div>
-                                        <p>
-                                            <span data-name="your-message">
-                                                <textarea cols="40" rows="10" aria-required="true" aria-invalid="false" name="your-message"></textarea>
-                                            </span>
-                                        </p>
-                                    </div>
-
-                                    <div className="group-bts">
-                                        <p>
-                                            <button type="submit" className="btn">
-                                                <span className="animated-button">
-                                                    <span>${convertToEm(t("sendMessage"), false)}</span>
-                                                </span>
-                                                <i className="icon fas fa-chevron-right"></i>
-                                            </button>
-                                        </p>
-                                    </div>
-
-                                    <div className="wpcf7-response-output" aria-hidden="true"></div>
-                                </form>
-                            </div>
-                        </div>
-
-                        <div className="contact-info">
-                            <div className="name">Leonardo Faggiani</div>
-                            <div className="subname">Programmer &amp; Mentor</div>
-                            <div className="info-list">
-                                <ul>
-                                    <li> <strong> <span> ${t("age")}: </span> </strong> <span> 35 </span></li>                                    
-                                    <li> <strong> <span> ${t("address")}: </span> </strong> <span> Rosario </span></li>
-                                    <li> <strong> <span> ${t("phone")}: </span> </strong> <span> +54 9 341 5147457 </span></li>
-                                    <li> <strong> <span> ${t("email")}: </span> </strong> <span> leonardofaggiani@hotmail.com </span></li>
-                                </ul>
-                            </div>
-
-                            <div className="author">Leonardo Faggiani</div>
-                        </div>
-
-                        <div className="clear"></div>
-                    </div>
-                </div>`
     };
 
     const delay = ms => new Promise(
@@ -233,7 +147,7 @@ export default function Home() {
 
                 <Section scrollTop={scrollTop} config={sectionStartedConfig}></Section>
                 <Section scrollTop={scrollTop} config={sectionAboutConfig}></Section>
-                <Section scrollTop={scrollTop} config={sectionContactConfig}></Section>
+                <SectionContact></SectionContact>
 
             </div>
         </>

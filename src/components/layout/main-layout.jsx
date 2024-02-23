@@ -10,7 +10,7 @@ export default function MainLayout({ children }) {
 
         const language = localStorage.getItem('lng');
 
-        if (language == "en") {
+        if (language === "en") {
             i18next.changeLanguage("es");
             localStorage.setItem('lng', 'es');
         }
@@ -33,15 +33,15 @@ export default function MainLayout({ children }) {
                         <div className="footer-inner">
                             <div className="text"> © 2023 Myour all right reserved.</div>
                             <div className="socials">
-                                <a target="_blank" href="https://github.com/LeonardoFaggiani">
+                                <a target="_blank" rel="noreferrer" href="https://github.com/LeonardoFaggiani">
                                     <i className="fa-brands fa-github"></i>
                                 </a>
 
-                                <a target="_blank" href="https://www.linkedin.com/in/leonardo-faggiani-2ba30859/">
+                                <a target="_blank" rel="noreferrer"  href="https://www.linkedin.com/in/leonardo-faggiani-2ba30859/">
                                     <i className="fa-brands fa-linkedin"></i>
                                 </a>
 
-                                <a onClick={() => changeLanguage()} className='pointerCursor'>
+                                <a onClick={() => changeLanguage()} rel="noreferrer" className='pointerCursor'>
                                     <i className="fa-solid fa-language"></i>
                                 </a>
                             </div>
