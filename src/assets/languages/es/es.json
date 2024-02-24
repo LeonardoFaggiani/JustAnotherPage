@@ -31,7 +31,7 @@
                 "title": "Sobre mi",
                 "subtitle": "Mi historia",
                 "firstParagraph": "Soy de Argentina y trabajo como programador desde el 2014.",
-                "secondParagraph": "En mis tiempos libres aparte de jugar videos juegos con amigos, hacer un poco de deporte ya sea gimnasio, rollers o futbol, también invierto un poco de tiempo en capacitarme ya sea en la tecnología que actualmente trabajo o en aprender algo nuevo. Durante este tiempo como profesional pase por varias empresas, seguimiento satelital de transporte público, software factory donde puede trabajar en varios tipos de negocios como para Agente Marítimos actualmente estoy trabajando en unas delas aseguradoras mas grande del pais."
+                "secondParagraph": "En mis tiempos libres aparte de jugar videos juegos con amigos, hacer un poco de deporte ya sea gimnasio, rollers o futbol, también invierto un poco de tiempo en capacitarme ya sea en la tecnología que actualmente trabajo o en aprender algo nuevo. Durante este tiempo como profesional pase por varias empresas, seguimiento satelital de transporte público, software factory donde puede trabajar en varios tipos de negocios como Agentes Marítimos, actualmente estoy trabajando en unas de las aseguradoras mas grande del pais."
             },
             "contact": {
                 "title": "Contactar",
@@ -45,7 +45,7 @@
             },
             "myweb": {
                 "title": "Ni mas ni menos que otra simple web",
-                "description": "Esta simple web tiene 2 objetivos bien claros, el primero mostrar mi historia laboral o lo que me gusta hacer y lo segundo aprender un poco de React, asi que te invito a mi Github para que chusmees 😉"
+                "description": "Esta simple web tiene 2 objetivos bien claros, el primero mostrar mi historia y lo segundo aprender un poco de React, asi que te invito a mi Github para que chusmees 😉"
             }
         }
     }

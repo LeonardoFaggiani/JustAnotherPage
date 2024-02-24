@@ -7,7 +7,7 @@
         "fullName": "Full name",
         "message": "Message",
         "sendMessage": "Send Message",
-        "blogSubtitle": "Aca encontraras todas mis pruebas de conceptos",
+        "blogSubtitle": "Here you will find all my proof of concepts.",
         "blogTitle": "My blog",
         "buttonReadMore": "Read more",
         "fieldRequired": "The field is required.",
@@ -24,14 +24,14 @@
         "section": {
             "started": {
                 "subtitle": "Programmer and Mentor",
-                "description": "Hello! I am Software Developer from Argentina with a solid experience of 10 years.",
+                "description": "Hello! I am Software Developer from Argentina with a solid experience of 10 years. I would like to talk to you, so feel free to contact me.",
                 "buttonLabel": "CONTACT ME"
             },
             "aboutMe": {
                 "title": "About Me",
                 "subtitle": "My Story",
-                "firstParagraph": "Soy de Argentina y trabajo como programador desde el 2014.",
-                "secondParagraph": "En mis tiempos libres aparte de jugar videos juegos con amigos, hacer un poco de deporte ya sea gimnasio, rollers o futbol, también invierto un poco de tiempo en capacitarme ya sea en la tecnología que actualmente trabajo o en aprender algo nuevo. Durante este tiempo como profesional pase por varias empresas, seguimiento satelital de transporte público, software factory donde puede trabajar en varios tipos de negocios como para Agente Marítimos actualmente estoy trabajando en unas delas aseguradoras mas grande del pais."
+                "firstParagraph": "I'm from Argentina and I work as Software Developer since 2014.",
+                "secondParagraph": "In my free time, apart from playing video games with friends and engaging in some sports like gym workouts, rollerblading, or soccer, I also invest a bit of time in self-improvement, whether it's staying updated on the technology I currently work with or learning something new. Throughout my professional journey, I have worked for various companies, including public transportation satellite tracking, a software factory where I had the opportunity to work with different businesses such as Maritime Agents. Currently, I am working for one of the largest insurance companies in the country."
             },
             "contact": {
                 "title": "Contact",
@@ -40,12 +40,12 @@
         },
         "blog": {
             "unreal": {
-                "title": "Multiplayer lobby hecho en Unreal Engine 5 con C++ y Blueprints",
-                "description": "El objetivo de esta prueba fue realizar un juego sencillo, que consta de un menu, lobby, varios mapas de ejemplos, integracion con Steam y LAN. En mi github dejo imagenes y un video con un pequeño demo."
+                "title": "Multiplayer Lobby made in Unreal Engine 5 C++ and Blueprints",
+                "description": "The objective of this proof of concept was to create a simple game, which includes a menu, lobby, some example maps, integration with Steam and LAN. I have uploaded images and a video with a brief demo on my GitHub."
             },
             "myweb": {
-                "title": "Ni mas ni menos que otra simple web",
-                "description": "Esta simple web tiene 2 objetivos bien claros, el primero mostrar mi historia laboral o lo que me gusta hacer y lo segundo aprender un poco de React, asi que te invito a mi Github para que chusmees ;)"
+                "title": "Just Another Page",
+                "description": "This simple website has 2 very clear objectives, the first is to showcase my story, and the second is to learn a little about React. So, I invite you to check out my Github to gossip 😉."
             }
         }
     }
