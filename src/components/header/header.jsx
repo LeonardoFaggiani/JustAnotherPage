@@ -1,14 +1,14 @@
 import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next';
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import { convertToEm, scrollTo } from '../shared/utils/utils'
+import { convertToEm, delayInMs, scrollTo } from '../shared/utils/utils'
 import './header.css'
 
 
 export default function Header() {
 
     const { state } = useLocation();
-    const { targetId } = state || {};
+    let { targetId } = state || {};
     const header = useRef(null);
     const navigate = useNavigate();
     const [offsetTop, setOffsetTop] = useState(0);
@@ -22,10 +22,14 @@ export default function Header() {
 
     useEffect(() => {
 
-        const el = document.getElementById(targetId);
+        let element = document.getElementById(targetId);
 
-        if (el)
-            scrollTo(el.offsetTop, "smooth");        
+        if (element) {
+            delayInMs(1700).then(() => {
+                element = document.getElementById(targetId);
+                scrollTo(element.offsetTop, "smooth");
+            });
+        }
 
     }, [targetId]);
 
@@ -77,14 +81,12 @@ export default function Header() {
         <>
             <header className="header fixed" ref={header}>
                 <div className="logo">
-                    <a href="#">
-                        <span className="logo-lnk"> Leonardo<br /> Faggiani </span>
-                    </a>
+                    <span className="logo-lnk"> Leonardo<br /> Faggiani </span>
                 </div>
 
-                <a onClick={(event) => openCloseHeader(event)} id='menuToggle' className="menu-btn">
+                <button onClick={(event) => openCloseHeader(event)} id='menuToggle' className="menu-btn">
                     <span></span>
-                </a>
+                </button>
 
                 <a href="https://leofstorage.blob.core.windows.net/my-personal-storage/LeonardoFaggianiCV-EN.docx" className="btn download-cv-btn" rel="noreferrer" target="_blank" download="">
                     <span className="animated-button"><span>{convertToEm(t("header.download"))}</span></span>

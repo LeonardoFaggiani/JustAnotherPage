@@ -14,7 +14,6 @@ export const convertToEm = (input, hasParse = true) => {
     }
 };
 
-
 export const scrollTo = (offsetTop, behavior) => {
 
     window.scrollTo({
@@ -23,3 +22,7 @@ export const scrollTo = (offsetTop, behavior) => {
     });
 
 };
+
+export const delayInMs = ms => new Promise(
+    resolve => setTimeout(resolve, ms)
+);

@@ -1,12 +1,10 @@
-import React, { useEffect, useContext } from 'react'
+import React, { useEffect } from 'react'
 import './blog.css'
 import { useTranslation } from 'react-i18next';
-import { LoadingScreenContext } from '../../context/loadingProvider'
 import { convertToEm, scrollTo } from '../shared/utils/utils'
 
 export default function Blog() {
 
-    const useLoadingScreen = useContext(LoadingScreenContext);
     const [t] = useTranslation();
 
     useEffect(() => {
@@ -21,8 +19,6 @@ export default function Blog() {
         setStyle();
 
     }, []);
-
-    useLoadingScreen.setLoading(false);
 
     return (
         <>

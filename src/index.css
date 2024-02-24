@@ -285,7 +285,7 @@ a:hover {
   transition-delay: .275s
 }
 
-a.btn,.btn,.single-post-text input[type=submit],button {
+button.btn,.btn,.single-post-text input[type=submit],button {
   padding: 0 35px;
   position: relative;
   overflow: hidden;
@@ -313,15 +313,19 @@ a.btn,.btn,.single-post-text input[type=submit],button {
   -o-transition: 1s all cubic-bezier(.165,.85,.45,1) 0s
 }
 
-a.btn:hover,.btn:hover,.single-post-text input[type=submit]:hover,button:hover {
+a.btn:hover,.btn:hover,.single-post-text input[type=submit]:hover,a:hover {
   border-color: #68e0cf
 }
 
-a.btn:hover .animated-button em,.btn:hover .animated-button em,.single-post-text input[type=submit]:hover .animated-button em,button:hover .animated-button em {
+button.btn:hover,.btn:hover,.single-post-text input[type=submit]:hover,button:hover {
+  border-color: #68e0cf
+}
+
+button.btn:hover .animated-button em,.btn:hover .animated-button em,.single-post-text input[type=submit]:hover .animated-button em,button:hover .animated-button em {
   transform: translateY(calc(16px*-1))
 }
 
-a.btn:hover .icon,.btn:hover .icon,.single-post-text input[type=submit]:hover .icon,button:hover .icon {
+button.btn:hover .icon,.btn:hover .icon,.single-post-text input[type=submit]:hover .icon,button:hover .icon {
   color: #68e0cf;
   transform: translateX(6px);
   -webkit-transform: translateX(6px);
@@ -329,7 +333,7 @@ a.btn:hover .icon,.btn:hover .icon,.single-post-text input[type=submit]:hover .i
   -o-transform: translateX(6px)
 }
 
-a.btn .icon,.btn .icon,button .icon {
+button.btn .icon,.btn .icon,button .icon {
   margin-left: 10px;
   transition: 1s all cubic-bezier(.165,.85,.45,1) 0s;
   -moz-transition: 1s all cubic-bezier(.165,.85,.45,1) 0s;

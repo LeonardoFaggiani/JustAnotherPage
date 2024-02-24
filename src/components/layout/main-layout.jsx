@@ -22,8 +22,8 @@ export default function MainLayout({ children }) {
 
     return (
         <>
+            <Header></Header>
             <LoadingScreenProvider>
-                <Header></Header>
                 <div className="container">
                     <div className="wrapper" id="wrapperContent">
                         {children}
@@ -31,7 +31,6 @@ export default function MainLayout({ children }) {
 
                     <footer className="footer">
                         <div className="footer-inner">
-                            <div className="text"> © 2023 Myour all right reserved.</div>
                             <div className="socials">
                                 <a target="_blank" rel="noreferrer" href="https://github.com/LeonardoFaggiani">
                                     <i className="fa-brands fa-github"></i>
