@@ -41,7 +41,8 @@
         "blog": {
             "unreal": {
                 "title": "Multiplayer lobby hecho en Unreal Engine 5 con C++ y Blueprints",
-                "description": "El objetivo de esta prueba fue realizar un juego sencillo, que consta de un menu, lobby, varios mapas de ejemplos, integracion con Steam y LAN. En mi github dejo imagenes y un video con un pequeño demo."
+                "description": "El objetivo de esta prueba fue realizar un juego sencillo, que consta de un menu, lobby, varios mapas de ejemplos, integracion con Steam y LAN. En mi github dejo imagenes y un video con un pequeño demo.",
+                "download": "Descargar {0}"
             },
             "myweb": {
                 "title": "Ni mas ni menos que otra simple web",

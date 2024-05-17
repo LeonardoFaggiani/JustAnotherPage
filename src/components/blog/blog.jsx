@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import './blog.css'
 import { useTranslation } from 'react-i18next';
-import { convertToEm, scrollTo } from '../shared/utils/utils'
+import { convertToEm, scrollTo, stringFormat } from '../shared/utils/utils'
 
 export default function Blog() {
 
@@ -49,7 +49,7 @@ export default function Blog() {
                             <div className="blog-item content-box">
                                 <div id="post-73" className="post type-post status-publish format-standard has-post-thumbnail hentry category-design category-music category-uncategorized category-wordpress tag-design tag-html">
                                     <div className="image">
-                                        <a className="post-thumbnail" target='blank' href="https://github.com/LeonardoFaggiani/UE5Samples" aria-hidden="true" tabIndex="-1">
+                                        <a className="post-thumbnail" target='blank' href="https://github.com/LeonardoFaggiani/JustAnotherLobby" aria-hidden="true" tabIndex="-1">
                                             <img width="1280"
                                                 height="720" src="https://leofstorage.blob.core.windows.net/my-personal-storage/UnrealGameLobby.JPG"
                                                 decoding="async"
@@ -65,11 +65,12 @@ export default function Blog() {
                                         </a>
                                     </div>
                                     <div className="desc">
-                                        <a href="https://github.com/LeonardoFaggiani/UE5Samples" className="name">{t("blog.unreal.title")}</a>
+                                        <a href="https://github.com/LeonardoFaggiani/JustAnotherLobby" className="name">{t("blog.unreal.title")}</a>
                                         <div className="single-post-text">
                                             <p>{t("blog.unreal.description")}</p>
+                                            <span dangerouslySetInnerHTML={{ __html: stringFormat(t("blog.unreal.download"), `<a className='pointerCursor'> <span className='animated-button'><a style='text-decoration:none' href='https://multiplayergame.blob.core.windows.net/justanotherlobby/JustAnotherLobby.rar'>DEMO</a></span></a>`) }} />
                                             <div>
-                                                <a href="https://github.com/LeonardoFaggiani/UE5Samples" className="btn">
+                                                <a href="https://github.com/LeonardoFaggiani/JustAnotherLobby" className="btn" target='blank'>
                                                     <span className="animated-button">
                                                         <span>{convertToEm(t("buttonReadMore"))}</span></span>
                                                 </a>
@@ -84,7 +85,7 @@ export default function Blog() {
                             <div className="blog-item content-box">
                                 <div id="post-71" className="post type-post status-publish format-standard has-post-thumbnail hentry category-design category-music category-uncategorized category-wordpress tag-design tag-html">
                                     <div className="image">
-                                        <a className="post-thumbnail" href="https://github.com/LeonardoFaggiani/justanotherpage" aria-hidden="true" tabIndex="-1">
+                                        <a className="post-thumbnail" target='blank' href="https://github.com/LeonardoFaggiani/justanotherpage" aria-hidden="true" tabIndex="-1">
                                             <img width="1280" height="719" src="https://leofstorage.blob.core.windows.net/my-personal-storage/MyWeb.JPG"
                                                 alt="Modern street art as a source of inspiration"
                                                 decoding="async"
@@ -103,7 +104,7 @@ export default function Blog() {
                                         <div className="single-post-text">
                                             <p>{t("blog.myweb.description")}</p>
                                             <div>
-                                                <a href="https://github.com/LeonardoFaggiani/justanotherpage" className="btn">
+                                                <a href="https://github.com/LeonardoFaggiani/justanotherpage" className="btn" target='blank'>
                                                     <span className="animated-button"><span>{convertToEm(t("buttonReadMore"))}</span></span>
                                                 </a>
                                             </div>

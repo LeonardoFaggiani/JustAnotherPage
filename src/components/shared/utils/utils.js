@@ -23,6 +23,12 @@ export const scrollTo = (offsetTop, behavior) => {
 
 };
 
+export const stringFormat = (template, ...args) => {
+    return template.replace(/{(\d+)}/g, (match, number) =>
+        typeof args[number] !== 'undefined' ? args[number] : match
+    );
+}
+
 export const delayInMs = ms => new Promise(
     resolve => setTimeout(resolve, ms)
 );
