@@ -1,17 +1,15 @@
-import React, { useRef, useContext, useEffect } from 'react'
+import React, { useRef, useEffect } from 'react'
 import { useTranslation } from 'react-i18next';
-import { convertToEm } from '../shared/utils/utils'
+import { convertToEm, delayInMs } from '../shared/utils/utils'
 import { useForm } from 'react-hook-form';
-import { LoadingScreenContext } from '../../context/loadingProvider'
 import './section.css'
 
 export default function SectionContact() {
 
     const [t] = useTranslation();
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const useLoadingScreen = useContext(LoadingScreenContext);
     const responseOutput = useRef(null);
-
+    
     useEffect(() => {
         cleanValidation();
     }, []);
@@ -19,9 +17,7 @@ export default function SectionContact() {
     const sendEmail = (data) => {
 
         cleanValidation();
-
-        useLoadingScreen.setLoading(true);
-
+        
         const requestBody = {
             email: data.email,
             fullName: data.name,
@@ -35,24 +31,31 @@ export default function SectionContact() {
 
         fetch('https://send-notification.azurewebsites.net/api/SaveEmailMessageInQueue', requestOptions)
             .then((result) => {
-                responseOutput.current.classList.add("response-success-output");
-                responseOutput.current.textContent = t("responseSuccessOutput");
+                    responseOutput.current.classList.add("response-success-output");
+                    responseOutput.current.textContent = t("responseSuccessOutput");
             })
-            .catch((error) => {
-                responseOutput.current.classList.add("response-failure-output");
-                responseOutput.current.textContent = t("responseFailureOutput")
+            .catch((error) => {                
+                    responseOutput.current.classList.add("response-failure-output");
+                    responseOutput.current.textContent = t("responseFailureOutput")
+            }).finally(() => {
+
+                delayInMs(3000).then(() => {
+                    cleanValidation();
+                });
             })
-            .finally(() => { useLoadingScreen.setLoading(false); });
     }
 
     function cleanValidation() {
-        responseOutput.current.classList.remove("response-success-output");
-        responseOutput.current.classList.remove("response-failure-output");
-        responseOutput.current.textContent = "";
-    }
 
+        if (responseOutput) {
+            responseOutput.current.classList.remove("response-success-output");
+            responseOutput.current.classList.remove("response-failure-output");
+            responseOutput.current.textContent = "";
+        }
+    }
+    
     return (
-        <>
+        <>        
             <section className="elementor-section elementor-element" id="section-contacts">
                 <div className="elementor-container elementor-column-gap-no">
                     <div className="elementor-column elementor-col-100 elementor-element">
@@ -121,7 +124,10 @@ export default function SectionContact() {
                                                             </p>
                                                         </div>
 
-                                                        <div ref={responseOutput}></div>
+                                                        <div ref={responseOutput}>
+
+                                                        </div>
+
                                                     </form>
                                                 </div>
                                             </div>
