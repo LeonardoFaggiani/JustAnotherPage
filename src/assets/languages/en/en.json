@@ -47,6 +47,10 @@
             "myweb": {
                 "title": "Just Another Page",
                 "description": "This simple website has 2 very clear objectives, the first is to showcase my story, and the second is to learn a little about React. So, I invite you to check out my Github to gossip 😉."
+            },
+            "alpr": {
+                "title": "ALPR with Darknet and YOLOv4-tiny",
+                "description": "Automatic number plate recognition (ANPR) with the particularity that it was trained with 8000+ images of Argentine license plates."
             }
         }
     }

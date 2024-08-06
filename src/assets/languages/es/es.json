@@ -47,6 +47,10 @@
             "myweb": {
                 "title": "Ni mas ni menos que otra simple web",
                 "description": "Esta simple web tiene 2 objetivos bien claros, el primero mostrar mi historia y lo segundo aprender un poco de React, asi que te invito a mi Github para que chusmees 😉"
+            },
+            "alpr": {
+                "title": "LPR con Darknet y YOLOv4-tiny",
+                "description": "Reconocedor de patentes (ANPR en ingles) con la particularidad que fue entrenado con mas de 8000 imagenes de patentes Argentinas."
             }
         }
     }

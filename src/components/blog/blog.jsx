@@ -45,6 +45,43 @@ export default function Blog() {
             <div className="section blog with-sidebar">
                 <div className="content centerContent">
                     <div className="blog-items cols">
+
+                    <div className="blog-col">
+                            <div className="blog-item content-box">
+                                <div id="post-73" className="post type-post status-publish format-standard has-post-thumbnail hentry category-design category-music category-uncategorized category-wordpress tag-design tag-html">
+                                    <div className="image">
+                                        <a className="post-thumbnail" target='blank' href="https://github.com/LeonardoFaggiani/JustAnotherAlpr" aria-hidden="true" tabIndex="-1">
+                                            <img width="1280"
+                                                height="720" src="https://leofstorage.blob.core.windows.net/my-personal-storage/LicensePlate.gif"
+                                                decoding="async"
+                                                srcSet="https://leofstorage.blob.core.windows.net/my-personal-storage/LicensePlate.gif 1280w,
+                                                 https://leofstorage.blob.core.windows.net/my-personal-storage/LicensePlate.gif 300w,
+                                                 https://leofstorage.blob.core.windows.net/my-personal-storage/LicensePlate.gif 1024w,
+                                                 https://leofstorage.blob.core.windows.net/my-personal-storage/LicensePlate.gif 768w,
+                                                 https://leofstorage.blob.core.windows.net/my-personal-storage/LicensePlate.gif 512w,
+                                                 https://leofstorage.blob.core.windows.net/my-personal-storage/LicensePlate.gif 900w,
+                                                 https://leofstorage.blob.core.windows.net/my-personal-storage/LicensePlate.gif 1170w"
+                                                 alt='Alpr'
+                                                sizes="(max-width: 1280px) 100vw, 1280px" />
+                                        </a>
+                                    </div>
+                                    <div className="desc">
+                                        <a href="https://github.com/LeonardoFaggiani/JustAnotherAlpr" className="name">{t("blog.alpr.title")}</a>
+                                        <div className="single-post-text">
+                                            <p>{t("blog.alpr.description")}</p>
+                                            <div>
+                                                <a href="https://github.com/LeonardoFaggiani/JustAnotherAlpr" className="btn" target='blank'>
+                                                    <span className="animated-button">
+                                                        <span>{convertToEm(t("buttonReadMore"))}</span></span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
                         <div className="blog-col">
                             <div className="blog-item content-box">
                                 <div id="post-73" className="post type-post status-publish format-standard has-post-thumbnail hentry category-design category-music category-uncategorized category-wordpress tag-design tag-html">
