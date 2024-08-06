@@ -22,3 +22,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 /backend/Notification/secret.settings.json
+.vs/VSWorkspaceState.json
+.vs/justanotherpage/v17/.wsuo
