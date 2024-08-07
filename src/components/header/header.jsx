@@ -88,7 +88,7 @@ export default function Header() {
                     <span></span>
                 </button>
 
-                <a href="https://leofstorage.blob.core.windows.net/my-personal-storage/LeonardoFaggianiCV-EN.docx" className="btn download-cv-btn" rel="noreferrer" target="_blank" download="">
+                <a href="https://leofstorage.blob.core.windows.net/my-personal-storage/LeonardoFaggianiCV-EN.pdf" className="btn download-cv-btn" rel="noreferrer" target="_blank" download="">
                     <span className="animated-button"><span>{convertToEm(t("header.download"))}</span></span>
                     <i className="icon fas fa-download"></i>
                 </a>
