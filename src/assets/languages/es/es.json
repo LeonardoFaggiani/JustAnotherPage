@@ -50,7 +50,7 @@
             },
             "alpr": {
                 "title": "LPR con Darknet y YOLOv4-tiny",
-                "description": "Reconocedor de patentes (ANPR en ingles) con la particularidad que fue entrenado con mas de 8000 imagenes de patentes Argentinas."
+                "description": "Reconocedor de patentes (ANPR en ingles) con la particularidad que fue entrenado con mas de 7200 imagenes de patentes Argentinas."
             }
         }
     }

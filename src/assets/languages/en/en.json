@@ -50,7 +50,7 @@
             },
             "alpr": {
                 "title": "ALPR with Darknet and YOLOv4-tiny",
-                "description": "Automatic number plate recognition (ANPR) with the particularity that it was trained with 8000+ images of Argentine license plates."
+                "description": "Automatic number plate recognition (ANPR) with the particularity that it was trained with 7200+ images of Argentine license plates."
             }
         }
     }
